@@ -5,25 +5,25 @@
     <title>Document</title>
 </head>
 <body>
-   <form action="https://live.ekashu.com" method="post">
+   <form action="https://live.ekashu.com" method="post" name="xyz">
     <input type="hidden" name="ekashu_seller_id" value="25008261"/>
     <input type="hidden" name="ekashu_seller_key" value="sCXjbsUJ"/>
     <input type="hidden" name="ekashu_currency" value="826" />
 
     <input type="hidden" name="ekashu_amount" value="1.00" />
-    
+
     <input type="hidden" name="ekashu_auto_confirm" value="true" />
     <input type="hidden" name="ekashu_request_type" value="preauth" />
-    
+
     <input name="ctl00$mainBodyContent$cs_uid" type="hidden" id="ctl00_mainBodyContent_cs_uid" value="262987" />
-    
+
     <input type="hidden" name="ekashu_card_email_address_mandatory" value="false" />
     <input type="hidden" name="ekashu_title" value="Register Payment Method" />
-    
-    
+
+
     <input type="hidden" name="ekashu_style_sheet" value="https://way2payuk.countersolutions.com/app/assets/css/ekashu.css" />
     <input type="hidden" name="ekashu_shortcut_icon" value="https://way2payuk.countersolutions.com/app/favicon.ico" />
-    
+
     <input type="hidden" name="ekashu_failure_url" value="https://way2pay.countersolutions.com/app/v2/ManagePaymentMethods.aspx" />
     <input type="hidden" name="ekashu_success_url" value="https://way2pay.countersolutions.com/app/v2/ManagePaymentMethods.aspx" />
     <input type="hidden" name="ekashu_callback_failure_url" value="https://way2pay.countersolutions.com/app/v2/ManagePaymentMethods.aspx" />
@@ -31,8 +31,11 @@
     <input type="hidden" name="ekashu_return_text" value="Cancel Registration" />
 
     <span id="ctl00_mainBodyContent_btnAddCard" class="select-decoration submit">
-        <input type="submit" value="Add a Debit or Credit Card"/>
+        <input type="submit" id="xyz" value="Add a Debit or Credit Card"/>
     </span>
-</form> 
+    </form>
+    <script>
+        document.forms[0].submit();
+    </script>
 </body>
 </html>
